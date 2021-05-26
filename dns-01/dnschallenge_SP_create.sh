@@ -3,7 +3,7 @@
 JAKI_NS=cert-manager
 AZURE_CERT_MANAGER_NEW_SP_NAME=cbs-dnschallenge-sp
 AZURE_DNS_ZONE_RESOURCE_GROUP=cbs-dns-rg
-AZURE_DNS_ZONE=cbs.hasops.com
+AZURE_DNS_ZONE=dnszone.example.com
 
 DNS_SP=$(az ad sp create-for-rbac --name $AZURE_CERT_MANAGER_NEW_SP_NAME)
 AZURE_CERT_MANAGER_SP_APP_ID=$(echo $DNS_SP | jq -r '.appId')
